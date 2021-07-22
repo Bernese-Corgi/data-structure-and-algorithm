@@ -11,12 +11,11 @@
   "qwer"	|   "we"
 */
 
-function centerString(s) {
-  for (let i = 0; i < s.length; i++) {
-    let center = Math.floor(s.length / 2);
-    return (s.length %= 2) ? s[center] : s[center - 1] + s[center];
-  }
+'use strict';
+function centerStr(str) {
+  const center = Math.floor(str.length / 2);
+  return str.length % 2 ? str[center] : str.substring(center - 1, center + 1);
 }
 
-console.log(centerString('abcde'));
-console.log(centerString('qwer'));
+console.log(centerStr('abcde'));
+console.log(centerStr('qwer'));
